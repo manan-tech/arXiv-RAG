@@ -42,7 +42,7 @@ query = st.text_input("Enter your search query (Arxiv title)")
 
 @st.cache_resource
 def search_arxiv(title, max_results=5):
-    base_url = "http://export.arxiv.org/api/query?"
+    base_url = "https://export.arxiv.org/api/query?"
     query_str = f"search_query=ti:{title}&start=0&max_results={max_results}"
     response = requests.get(base_url + query_str)
     feed = feedparser.parse(response.text)
