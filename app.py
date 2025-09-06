@@ -14,8 +14,8 @@ from langchain_community.vectorstores import FAISS
 
 os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
-os.environ['OPENAI_API_KEY'] = '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'
-os.environ['LANGSMITH_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
+os.environ['LANGSMITH_API_KEY'] = os.getenv("LANGSMITH_API_KEY")
 os.environ['LANGSMITH_PROJECT'] = "WebRAG"
 os.environ['LANGSMITH_TRACING'] = "true"
 os.environ['LANGSMITH_ENDPOINT'] = "https://api.smith.langchain.com"
