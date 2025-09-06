@@ -161,6 +161,6 @@ if query:
 
         st.subheader("📄 Top Relevant Papers")
         for paper in papers:
-            st.markdown(f"**{paper['title']}**  \n*arXiv ID: {paper['arxiv_id']}*")
+            st.markdown(f"**{paper['title']}**")
             with st.expander("Summary"):
                 st.write(paper["summary"])
